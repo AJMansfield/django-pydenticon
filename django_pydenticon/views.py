@@ -81,5 +81,6 @@ def image(request, data):
 
     # Create and return the response.
     response = HttpResponse(content, content_type=content_type)
+    response['Cache-Control'] = 'public, max-age=31536000'
 
     return response
